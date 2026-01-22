@@ -43,3 +43,15 @@ for tag in soup.select("div.board-wrap ul > li"):
 
 df = pd.DataFrame(data)
 df.to_csv("docs/lab_notice.csv", index=False, encoding="utf-8-sig")
+
+from feedgen. feed import FeedGenerator
+fg = FeedGenerator()
+fg.id('http://lernfunk.de/media/654321')
+fg.title('Some Testfeed')
+fg.author( {'name':'John Doe','email': 'john@example.de'} )
+fg.link( href='http://example.com', rel='alternate' )
+fg.logo('http://ex.com/logo.jpg')
+fg.subtitle('This is a cool feed!')
+fg.link( href='http://larskiesow.de/test.atom', rel='self' )
+fg.language('en')
+fg.rss_file('rss.xml')
