@@ -42,4 +42,4 @@ for tag in soup.select("div.board-wrap ul > li"):
         continue
 
 df = pd.DataFrame(data)
-df.to_csv("lab_notice.csv", index=False, encoding="utf-8-sig")
+df.to_csv("docs/lab_notice.csv", index=False, encoding="utf-8-sig")
